@@ -1,4 +1,4 @@
-const mensagemSecreta = "minhamensagemsecreta"
+const mensagemSecreta = "Hoje vamos atacar o castelo do rei"
 
 console.log(mensagemSecreta)
 
