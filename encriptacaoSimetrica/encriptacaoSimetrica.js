@@ -6,12 +6,11 @@ const iv = randomBytes(16);
 
 const cifra = createCipheriv('aes-256-gcm', chave, iv);
 
-let mensagemCifrada = cifra.update(mensagem, 'utf8', 'hex');
-mensagemCifrada += cifra.final('hex');
+let mensagemCifrada = cifra.update(mensagem, 'utf8', 'hex') + cifra.final('hex');
 
 console.log(mensagemCifrada);
 
-// Transmissão ---------------- chave, iv, mensagemCifrada
+// Transmissão ---------------- chave, iv, mensagem
 
 const decifra = createDecipheriv('aes-256-gcm', chave, iv);
 
